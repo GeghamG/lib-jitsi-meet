@@ -932,6 +932,15 @@ export default class ChatRoom extends Listenable {
         const msg = $msg({ to: this.roomjid,
             type: 'groupchat' });
 
+        console.log(
+            {
+                oldMsg: msg,
+                newMsg: $msg({ to: this.roomjid,
+                    type: 'groupchat',
+                    test: 5 })
+            }
+        );
+
         // We are adding the message in a packet extension. If this element
         // is different from 'body', we add a custom namespace.
         // e.g. for 'json-message' extension of message stanza.
